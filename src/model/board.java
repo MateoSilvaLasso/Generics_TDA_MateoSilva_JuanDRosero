@@ -14,33 +14,31 @@ public class board<T> implements IBoard<T>{
         this.set = all;
     }
 
-    public void addElement(T p){
-        this.set.add(p);
+    public boolean addElement(T p){
+       return this.set.add(p);
     }
 
     public int Cardinality(){
         int count=0;
-      for(T player: set){
+      for(T s: set){
           count++;
       }
 
       return count;
     }
 
-    public void deleteElement(T p){
-        set.remove(p);
-        return;
+    public String showElements(){
+       String out="";
+       for(T s: set){
+           out+= s.toString() + "\n";
+       }
+
+       return out;
     }
 
-    public T search(T p){
-        T a=null;
-        for(T sets: set){
-            if(sets==p){
-                a=sets;
-                break;
-            }
-        }
-        return a;
+    public boolean empty(){
+
+        return set.isEmpty();
     }
 
 

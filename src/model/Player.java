@@ -34,4 +34,13 @@ public class Player {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "nickName='" + nickName + '\'' +
+                ", score=" + score +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }

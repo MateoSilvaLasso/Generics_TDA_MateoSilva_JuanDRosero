@@ -2,11 +2,11 @@ package model;
 
 public interface IBoard<E> {
 
-    public void addElement(E i);
+    public boolean addElement(E i);
 
     public int Cardinality();
 
-    public void deleteElement(E i);
+    public String showElements();
 
-    public E search(E i);
+    public boolean empty();
 }
